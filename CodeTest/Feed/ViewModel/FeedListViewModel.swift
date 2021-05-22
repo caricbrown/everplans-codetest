@@ -23,7 +23,7 @@ final class FeedListViewModel: ObservableObject {
     private var cancellableSet: Set<AnyCancellable> = []
     
     static func loadedState() -> FeedListViewModel {
-        let viewModel = FeedListViewModel(feedApi: TestDoubleFeed())
+        let viewModel = FeedListViewModel(feedApi: TestDoubleFeed(), voteApi: TestDoubleVote())
         return viewModel
     }
 }

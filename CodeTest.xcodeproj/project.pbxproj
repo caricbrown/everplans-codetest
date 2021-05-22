@@ -11,7 +11,7 @@
 		0F74310926504B5A00DF8597 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F74310826504B5A00DF8597 /* SignupView.swift */; };
 		0F74310B26504B5C00DF8597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F74310A26504B5C00DF8597 /* Assets.xcassets */; };
 		0F74310E26504B5C00DF8597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F74310D26504B5C00DF8597 /* Preview Assets.xcassets */; };
-		0F74311926504B5D00DF8597 /* CodeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F74311826504B5D00DF8597 /* CodeTestTests.swift */; };
+		0F74311926504B5D00DF8597 /* FeedListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F74311826504B5D00DF8597 /* FeedListViewModelTests.swift */; };
 		0F74312426504B5D00DF8597 /* CodeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F74312326504B5D00DF8597 /* CodeTestUITests.swift */; };
 		0F74313B2650621900DF8597 /* PostedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7431372650621800DF8597 /* PostedBy.swift */; };
 		0F74313C2650621900DF8597 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7431382650621800DF8597 /* FeedResponse.swift */; };
@@ -65,6 +65,7 @@
 		0FE489F026587F6A009E4723 /* ApolloVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE489EF26587F6A009E4723 /* ApolloVote.swift */; };
 		0FE489F526588700009E4723 /* Downvote.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0FE489F426588700009E4723 /* Downvote.graphql */; };
 		0FE489FD265887C4009E4723 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE489FC265887C4009E4723 /* API.swift */; };
+		0FE48A14265968B0009E4723 /* TestDoubleVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48A13265968B0009E4723 /* TestDoubleVote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +93,7 @@
 		0F74310D26504B5C00DF8597 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F74310F26504B5C00DF8597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F74311426504B5D00DF8597 /* CodeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F74311826504B5D00DF8597 /* CodeTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTestTests.swift; sourceTree = "<group>"; };
+		0F74311826504B5D00DF8597 /* FeedListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewModelTests.swift; sourceTree = "<group>"; };
 		0F74311A26504B5D00DF8597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F74311F26504B5D00DF8597 /* CodeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F74312326504B5D00DF8597 /* CodeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTestUITests.swift; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		0FE489EF26587F6A009E4723 /* ApolloVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloVote.swift; sourceTree = "<group>"; };
 		0FE489F426588700009E4723 /* Downvote.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Downvote.graphql; sourceTree = "<group>"; };
 		0FE489FC265887C4009E4723 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		0FE48A13265968B0009E4723 /* TestDoubleVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDoubleVote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,7 +237,7 @@
 		0F74311726504B5D00DF8597 /* CodeTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				0F74311826504B5D00DF8597 /* CodeTestTests.swift */,
+				0F74311826504B5D00DF8597 /* FeedListViewModelTests.swift */,
 				0F74311A26504B5D00DF8597 /* Info.plist */,
 			);
 			path = CodeTestTests;
@@ -446,6 +448,7 @@
 				0F7431472650641600DF8597 /* TestDoubleFeed.swift */,
 				0F74326B265489C700DF8597 /* ApolloFeed.swift */,
 				0FE4899A26582739009E4723 /* ApolloCreatePost.swift */,
+				0FE48A13265968B0009E4723 /* TestDoubleVote.swift */,
 				0FE489EF26587F6A009E4723 /* ApolloVote.swift */,
 				0F7432782654DBEA00DF8597 /* Models */,
 			);
@@ -662,6 +665,7 @@
 				0F74321826535A8C00DF8597 /* CreatePostViewModel.swift in Sources */,
 				0F7431682650801C00DF8597 /* FeedItemList.swift in Sources */,
 				0F7431B42651F13900DF8597 /* SignupViewModel.swift in Sources */,
+				0FE48A14265968B0009E4723 /* TestDoubleVote.swift in Sources */,
 				0F74313B2650621900DF8597 /* PostedBy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,7 +674,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F74311926504B5D00DF8597 /* CodeTestTests.swift in Sources */,
+				0F74311926504B5D00DF8597 /* FeedListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -129,22 +129,25 @@ final class TestDoubleFeed: FeedAPI {
     """
     
     func getFeed() -> AnyPublisher<[FeedEntity], Never> {
-        let jsonData = jsonString.data(using: .utf8)!
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(formatter)
-        
-        let feedResponse = (try? decoder.decode(FeedResponse.self, from: jsonData)) ?? FeedResponse(data: FeedDataClass(feed: []))
-        
-        let feed = feedResponse.data.feed.map {
-            FeedEntity(id: $0.id, url: $0.url, feedDescription: $0.feedDescription, votes: $0.votes, createdAt: $0.createdAt, postedBy: $0.postedBy.name)
+        return Deferred {
+            Future<[FeedEntity], Never> { [self] promise in
+                let jsonData = jsonString.data(using: .utf8)!
+                
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .formatted(formatter)
+                
+                let feedResponse = (try? decoder.decode(FeedResponse.self, from: jsonData)) ?? FeedResponse(data: FeedDataClass(feed: []))
+                
+                let feed = feedResponse.data.feed.map {
+                    FeedEntity(id: $0.id, url: $0.url, feedDescription: $0.feedDescription, votes: $0.votes, createdAt: $0.createdAt, postedBy: $0.postedBy.name)
+                }
+                promise(.success(feed))
+            }
         }
-        
-        return Just<[FeedEntity]>(feed)
-            .receive(on: DispatchQueue.main)
-            .eraseToAnyPublisher()
+        .receive(on: DispatchQueue.main)
+        .eraseToAnyPublisher()
     }
 }
