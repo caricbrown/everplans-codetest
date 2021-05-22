@@ -1,0 +1,13 @@
+
+query Feed {
+  feed {
+    id
+    url
+    description
+    votes
+    createdAt
+    postedBy {
+      name
+    }
+  }
+}
