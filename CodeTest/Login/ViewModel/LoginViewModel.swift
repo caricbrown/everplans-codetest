@@ -46,6 +46,7 @@ final class LoginViewModel: ObservableObject {
         loginApi.login(email: email, password: password)
             .sink(receiveCompletion:{ _ in }, receiveValue: { result in
                 /*
+                 * Making the VM responsible for updating "App State" is not ideal.
                  * There is no real reason to return anything but Void here.
                  */
             })

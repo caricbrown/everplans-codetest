@@ -50,9 +50,8 @@ final class SignupViewModel: ObservableObject {
         signupApi.signup(name: name, email: email, password: password)
             .sink(receiveCompletion:{ _ in }, receiveValue: { result in
                 /*
-                 * Making the VM responsible for updating "Global App State" is not ideal.
-                 * In fact there is no real reason to return anything but Void here.
-                 * In a real-world situation we would use a UseCase class to handle all side effects.
+                 * Making the VM responsible for updating "App State" is not ideal.
+                 * There is no real reason to return anything but Void here.
                  */
             })
             .store(in: &cancellableSet)

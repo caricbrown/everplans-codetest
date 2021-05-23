@@ -45,6 +45,7 @@ final class CreatePostViewModel: ObservableObject {
         postApi.createPost(url: url, title: title)
             .sink(receiveCompletion:{ _ in }, receiveValue: { result in
                 /*
+                 * Making the VM responsible for updating "App State" is not ideal.
                  * There is no real reason to return anything but Void here.
                  */
             })
