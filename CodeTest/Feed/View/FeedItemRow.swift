@@ -22,7 +22,7 @@ struct FeedItemRow: View {
                 .frame(width: 50, height: 50)
                 .lineLimit(nil)
                 .multilineTextAlignment(.center)
-                        
+            
             VStack(alignment: .leading) {
                 Text(feedItem.title)
                     .font(.system(size: 16, weight: .bold))
@@ -30,9 +30,7 @@ struct FeedItemRow: View {
                 Text(feedItem.subtitle)
                     .font(.system(size: 12, weight: .regular))
                     .foregroundColor(Color("secondaryTextColor")).lineLimit(1)
-                Text(feedItem.footer)
-                    .font(.system(size: 12, weight: .regular))
-                    .foregroundColor(Color("secondaryTextColor")).lineLimit(1)
+                footerText
             }
             
             Spacer()
@@ -57,12 +55,23 @@ struct FeedItemRow: View {
                     }
                 }
             }.frame(width: 50, height: 50)
-
+            
         }
     }
 }
 
 extension FeedItemRow {
+    private var footerText: some View {
+        HStack {
+            if (selected) {
+                Text(feedItem.votes).modifier(GreenBoldFooterTextStyle())
+            } else {
+                Text(feedItem.votes).modifier(GrayFooterTextStyle())
+            }
+            Text(feedItem.footer).modifier(GrayFooterTextStyle())
+        }
+    }
+    
     func handleVoteAction() {
         
         withAnimation {

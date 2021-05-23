@@ -12,6 +12,7 @@ struct FeedRowViewModel: Identifiable {
     let id: String
     let title: String
     let subtitle: String
+    let votes: String
     let footer: String
     
     init(index: Int, feedEntity: FeedEntity) {
@@ -24,6 +25,7 @@ struct FeedRowViewModel: Identifiable {
         self.id = feedEntity.id
         self.title = feedEntity.feedDescription
         self.subtitle = feedEntity.url
-        self.footer = "\(feedEntity.votes) votes by \(feedEntity.postedBy) \(createdAtFormattedDate)"
+        self.votes = String(feedEntity.votes)
+        self.footer = "votes by \(feedEntity.postedBy) \(createdAtFormattedDate)"
     }
 }

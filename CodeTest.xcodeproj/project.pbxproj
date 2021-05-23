@@ -66,6 +66,8 @@
 		0FE489F526588700009E4723 /* Downvote.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0FE489F426588700009E4723 /* Downvote.graphql */; };
 		0FE489FD265887C4009E4723 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE489FC265887C4009E4723 /* API.swift */; };
 		0FE48A14265968B0009E4723 /* TestDoubleVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48A13265968B0009E4723 /* TestDoubleVote.swift */; };
+		0FE48A22265AE334009E4723 /* GreenBoldFooterTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48A21265AE334009E4723 /* GreenBoldFooterTextStyle.swift */; };
+		0FE48A27265AE480009E4723 /* GrayFooterTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48A26265AE480009E4723 /* GrayFooterTextStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +151,8 @@
 		0FE489F426588700009E4723 /* Downvote.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Downvote.graphql; sourceTree = "<group>"; };
 		0FE489FC265887C4009E4723 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0FE48A13265968B0009E4723 /* TestDoubleVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDoubleVote.swift; sourceTree = "<group>"; };
+		0FE48A21265AE334009E4723 /* GreenBoldFooterTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenBoldFooterTextStyle.swift; sourceTree = "<group>"; };
+		0FE48A26265AE480009E4723 /* GrayFooterTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayFooterTextStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +313,8 @@
 				0F74323C2654351800DF8597 /* TextFieldMaterialStyle.swift */,
 				0F7431C12652020900DF8597 /* ButtonPrimaryStyle.swift */,
 				0F74324D2654708000DF8597 /* NavigationBarAppearance.swift */,
+				0FE48A21265AE334009E4723 /* GreenBoldFooterTextStyle.swift */,
+				0FE48A26265AE480009E4723 /* GrayFooterTextStyle.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -633,6 +639,7 @@
 				0F74323D2654351800DF8597 /* TextFieldMaterialStyle.swift in Sources */,
 				0F7432FB2655B15800DF8597 /* LoginViewModel.swift in Sources */,
 				0F7432862654DE4400DF8597 /* FeedEntity.swift in Sources */,
+				0FE48A27265AE480009E4723 /* GrayFooterTextStyle.swift in Sources */,
 				0F7431D22652D6E600DF8597 /* ViewExtensions.swift in Sources */,
 				0FE489B226582902009E4723 /* CreatePostEntity.swift in Sources */,
 				0FE4898D26582433009E4723 /* LoginEntity.swift in Sources */,
@@ -640,6 +647,7 @@
 				0F7431702650853A00DF8597 /* FeedRowViewModel.swift in Sources */,
 				0F74313D2650621900DF8597 /* Feed.swift in Sources */,
 				0F7432422654557100DF8597 /* ColorExtensions.swift in Sources */,
+				0FE48A22265AE334009E4723 /* GreenBoldFooterTextStyle.swift in Sources */,
 				0FBADEF82657704C0083F154 /* LoginAPI.swift in Sources */,
 				0F74310926504B5A00DF8597 /* SignupView.swift in Sources */,
 				0FE489E326587E6A009E4723 /* VoteEntity.swift in Sources */,
