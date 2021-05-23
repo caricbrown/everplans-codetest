@@ -12,6 +12,5 @@ struct GrayFooterTextStyle: ViewModifier {
         return content
             .font(.system(size: 12))
             .foregroundColor(Color("secondaryTextColor")).lineLimit(1)
-            .padding(.leading, -4)
     }
 }

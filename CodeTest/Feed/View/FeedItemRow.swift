@@ -65,8 +65,10 @@ extension FeedItemRow {
         HStack {
             if (selected) {
                 Text(feedItem.votes).modifier(GreenBoldFooterTextStyle())
+                    .padding(.trailing, -5)
             } else {
                 Text(feedItem.votes).modifier(GrayFooterTextStyle())
+                    .padding(.trailing, -5)
             }
             Text(feedItem.footer).modifier(GrayFooterTextStyle())
         }

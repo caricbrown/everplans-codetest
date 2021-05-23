@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-//struct ButtomCustomStyle: ButtonStyle {
-//    func makeBody(configuration: Self.Configuration) -> some View {
-//        configuration.label
-//            .foregroundColor(Color.white)
-//            .font(.system(size: 16, weight: .semibold))
-//            .padding()
-//            .background(Color.greenColor)
-//            .cornerRadius(32.0)
-//            .padding(.vertical, 10)
-//            .padding(.horizontal, 24)
-//    }
-//}
-
 struct ButtonPrimaryStyle: ButtonStyle {
     struct Content: View {
         @Environment(\.isEnabled) var isEnabled
