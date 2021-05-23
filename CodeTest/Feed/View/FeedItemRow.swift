@@ -96,6 +96,7 @@ struct FeedItemRow_Previews: PreviewProvider {
         let feedEntity = FeedEntity(id: "1", url: "http://www.supercali1234567890.com.edu", feedDescription: "Some long description", votes: 99, createdAt: "2021-05-15T19:52:03.163Z", postedBy: "alice")
         let feedItem = FeedRowViewModel(index: 999, feedEntity: feedEntity)
         
-        return FeedItemRow(feedItem: feedItem, selected: false).previewLayout(.sizeThatFits)
+        FeedItemRow(feedItem: feedItem, selected: false).previewLayout(.sizeThatFits)
+        FeedItemRow(feedItem: feedItem, selected: true).previewLayout(.sizeThatFits)
     }
 }
