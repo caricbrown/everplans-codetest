@@ -11,7 +11,7 @@ struct FeedItemRow: View {
     var feedItem: FeedRowViewModel
     
     @State var selected: Bool
-    var voteAction: (() -> Void)?
+    var voteAction: ((_ isSelected: Bool) -> Void)?
     
     @State private var showCheckmark = false
     
@@ -82,7 +82,7 @@ extension FeedItemRow {
         }
         
         if (self.voteAction != nil) {
-            self.voteAction!()
+            self.voteAction!(self.selected)
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.33) {

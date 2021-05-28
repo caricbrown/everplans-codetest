@@ -28,7 +28,7 @@ struct FeedItemList: View {
                 ZStack {
                     List {
                         ForEach(self.viewModel.feedItems) {feedItem in
-                            FeedItemRow(feedItem: feedItem, selected: viewModel.votes.contains(feedItem.id), voteAction: { viewModel.handleVoteAction(feedItem.id) })
+                            FeedItemRow(feedItem: feedItem, selected: viewModel.votes.contains(feedItem.id), voteAction: { isSelected in viewModel.handleVoteAction(feedItem.id, isSelected: isSelected) })
                         }
                     }
                     .listStyle(PlainListStyle())

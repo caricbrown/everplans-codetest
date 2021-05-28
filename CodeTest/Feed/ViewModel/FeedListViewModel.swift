@@ -10,7 +10,7 @@ import SwiftUI
 
 final class FeedListViewModel: ObservableObject {
     @Published var feedItems = [FeedRowViewModel]()
-    @Published var votes: [String] = [] // backed by @U -> see ApolloVote
+    @Published var votes: [String] = [] // backed by @UserDefaults -> see ApolloVote
     
     private let feedApi: FeedAPI
     private let voteApi: VoteAPI
@@ -53,20 +53,21 @@ extension FeedListViewModel {
         NotificationCenter.default.post(name: CodeTestApp.logoutEvent, object: nil)
     }
     
-    func handleVoteAction(_ id: String) {
-        if (!votes.contains(id)) {
+    func handleVoteAction(_ id: String, isSelected: Bool) {
+        // FeedItemRow handles voting optimisitically, so we respect the value accordingly.
+        if (isSelected) {
             voteApi.upvote(id: id)
                 .sink(receiveCompletion:{ _ in }, receiveValue: { result in
-                    self.getCachedVotes()
                     self.getSortedFeed()
+                    self.getCachedVotes()
                 })
                 .store(in: &cancellableSet)
             
         } else {
             voteApi.downvote(id: id)
                 .sink(receiveCompletion:{ _ in }, receiveValue: { result in
-                    self.getCachedVotes()
                     self.getSortedFeed()
+                    self.getCachedVotes()
                 })
                 .store(in: &cancellableSet)
         }
